@@ -1,0 +1,84 @@
+{
+  "project_info": {
+    "project_number": "499295162321",
+    "project_id": "riego-plantas",
+    "storage_bucket": "riego-plantas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499295162321:android:89516bc2554dd5e7f4daf0",
+        "android_client_info": {
+          "package_name": "com.darklobox.ExpoPlants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499295162321-043qn3963dh095gngjji86qretf4n5to.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darklobox.ExpoPlants",
+            "certificate_hash": "9c832b20e2c7957946bf626248ee89b7ed78d6f5"
+          }
+        },
+        {
+          "client_id": "499295162321-lpqva8h3996nje90f1l20g3krqkhdg9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darklobox.ExpoPlants",
+            "certificate_hash": "129912124493a20167a64129a13527264d71a4be"
+          }
+        },
+        {
+          "client_id": "499295162321-99gvpskd10eh3afuc0e5jpdrhjn1ue6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7AblFvtMCPpm_JW3sdKm9GF_zbMvoDL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499295162321-99gvpskd10eh3afuc0e5jpdrhjn1ue6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499295162321:android:74c99dbfe011f506f4daf0",
+        "android_client_info": {
+          "package_name": "com.darklobox.vierdes_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499295162321-99gvpskd10eh3afuc0e5jpdrhjn1ue6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7AblFvtMCPpm_JW3sdKm9GF_zbMvoDL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499295162321-99gvpskd10eh3afuc0e5jpdrhjn1ue6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
