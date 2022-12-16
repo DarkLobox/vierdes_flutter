@@ -1,7 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:vierdes_flutter/screens/PlantsDetail.dart';
+import 'screens/Add.dart';
+import 'screens/Plants.dart';
+import 'screens/Profile.dart';
 import 'auth_service.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,44 +18,10 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
   final screens = [
-    const Center(child: Text('Home Screen', style: TextStyle(fontSize: 45))),
-    const Center(
-        child: Text('Favorites Screen', style: TextStyle(fontSize: 45))),
+    const Plants(),
+    Add(),
     const Center(child: Text('Search Screen', style: TextStyle(fontSize: 45))),
-    Center(child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-
-        Text(
-          FirebaseAuth.instance.currentUser!.displayName!,
-          style: const TextStyle(
-              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black87),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Text(
-          FirebaseAuth.instance.currentUser!.email!,
-          style: const TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black87),
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-        MaterialButton(
-          padding: const EdgeInsets.all(10),
-          color: Colors.green,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-          child: const Text(
-            'LOG OUT',
-            style: TextStyle(color: Colors.white, fontSize: 15),
-          ),
-          onPressed: () {
-            AuthService().signOut();
-          },
-        ),
-      ],
-    )),
+    const Profile(),
   ];
   final colors = [
     Colors.cyan,
@@ -64,7 +35,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MyApp',
+        title: const Text('Vierdes Flutter',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
         centerTitle: true,
         backgroundColor: colors[_currentIndex],
@@ -83,19 +54,19 @@ class _HomePageState extends State<HomePage> {
           tabs: const [
             GButton(
               icon: Icons.home,
-              text: 'Home',
+              text: 'Plants',
               iconActiveColor: Colors.white,
               textColor: Colors.white,
             ),
             GButton(
-              icon: Icons.favorite_border,
-              text: 'Favorites',
+              icon: Icons.add_circle,
+              text: 'Add',
               iconActiveColor: Colors.white,
               textColor: Colors.white,
             ),
             GButton(
-              icon: Icons.search,
-              text: 'Search',
+              icon: Icons.add_alert_rounded,
+              text: 'Config',
               iconActiveColor: Colors.white,
               textColor: Colors.white,
             ),
@@ -111,42 +82,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-/*body: Container(
-        color: Colors.white,
-        width: MediaQuery.of(context).size.width,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-
-            Text(
-              FirebaseAuth.instance.currentUser!.displayName!,
-              style: const TextStyle(
-                  fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black87),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-              FirebaseAuth.instance.currentUser!.email!,
-              style: const TextStyle(
-                  fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black87),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            MaterialButton(
-              padding: const EdgeInsets.all(10),
-              color: Colors.green,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-              child: const Text(
-                'LOG OUT',
-                style: TextStyle(color: Colors.white, fontSize: 15),
-              ),
-              onPressed: () {
-                AuthService().signOut();
-              },
-            ),
-          ],
-        ),
-      ),*/
