@@ -43,7 +43,7 @@ class Plants extends StatelessWidget {
                         backgroundColor: Colors.deepPurpleAccent,
                         child: ClipOval(
                           child: Image.network(
-                            "https://principia.io/media/uploads/images/colegio-domus/cover-plantas.jpg",
+                            documentSnapshot['image'].toString(),
                             fit: BoxFit.cover,
                             width: 50,
                             height: 50,
