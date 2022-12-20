@@ -25,8 +25,12 @@ class Profile extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Text(
               FirebaseAuth.instance.currentUser!.displayName!,
+              textAlign: TextAlign.center,
               style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,

@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
@@ -23,6 +24,8 @@ class _HomePageState extends State<HomePage> {
     const Center(child: Text('Search Screen', style: TextStyle(fontSize: 45))),
     const Profile(),
   ];
+  
+
   final colors = [
     Colors.cyan,
     Colors.purple,

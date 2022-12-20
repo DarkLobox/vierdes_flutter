@@ -29,7 +29,13 @@ class Plants extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => PlantsDetail(documentSnapshot['type'])),
+                    MaterialPageRoute(builder: (context) => PlantsDetail(
+                        documentSnapshot['type'],
+                        documentSnapshot['description'],
+                        documentSnapshot['dateCreation'],
+                        documentSnapshot['image'],
+                        documentSnapshot.id
+                    )),
                   );
                 },
                 child: Card(
