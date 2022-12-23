@@ -15,7 +15,7 @@ class Profile extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               radius: 110,
-              backgroundColor: Colors.deepOrangeAccent,
+              backgroundColor: Colors.cyan,
               child: ClipOval(
                 child: Image.network(
                   FirebaseAuth.instance.currentUser!.photoURL!,
@@ -51,7 +51,7 @@ class Profile extends StatelessWidget {
             ),
             MaterialButton(
               padding: const EdgeInsets.all(10),
-              color: Colors.green,
+              color: Colors.redAccent,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5)),
               child: const Text(

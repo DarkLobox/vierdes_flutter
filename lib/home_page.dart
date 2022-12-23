@@ -21,16 +21,15 @@ class _HomePageState extends State<HomePage> {
   final screens = [
     const Plants(),
     Add(),
-    const Center(child: Text('Search Screen', style: TextStyle(fontSize: 45))),
+    //const Center(child: Text('Search Screen', style: TextStyle(fontSize: 45))),
     const Profile(),
   ];
   
 
   final colors = [
-    Colors.cyan,
-    Colors.purple,
     Colors.green,
-    Colors.red,
+    Colors.purple,
+    Colors.cyan,
   ];
 
   //String? user = FirebaseAuth.instance.currentUser!.email ?? FirebaseAuth.instance.currentUser!.displayName;
@@ -67,12 +66,12 @@ class _HomePageState extends State<HomePage> {
               iconActiveColor: Colors.white,
               textColor: Colors.white,
             ),
-            GButton(
+            /*GButton(
               icon: Icons.add_alert_rounded,
               text: 'Config',
               iconActiveColor: Colors.white,
               textColor: Colors.white,
-            ),
+            ),*/
             GButton(
               icon: Icons.person,
               text: 'Profile',

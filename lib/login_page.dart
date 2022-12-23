@@ -17,27 +17,40 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("Google Login"),
+        title: const Text("Vierdes Flutter"),
         backgroundColor: Colors.green,
       ),
       body: Container(
         width: size.width,
         height: size.height,
-        padding: EdgeInsets.only(
-            left: 20, right: 20, top: size.height * 0.2, bottom: size.height * 0.5),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Hello, \nGoogle sign in",
-                style: TextStyle(
-                    fontSize: 30
-                )),
-            GestureDetector(
-                onTap: () {
-                  AuthService().signInWithGoogle();
-                },
-                child: const Image(width: 100, image: AssetImage('assets/google.png'))),
+            const SizedBox(
+              height: 20,
+            ),
+            Image.network(
+              "https://firebasestorage.googleapis.com/v0/b/riego-plantas.appspot.com/o/assets%2Flogo.png?alt=media&token=c298f50f-6041-4d1c-aaf1-757a56cc38cc",
+              fit: BoxFit.cover,
+              width: 250,
+              height: 250,
+            ),
+            const SizedBox(
+              height: 60,
+            ),
+            MaterialButton(
+              padding: const EdgeInsets.all(10),
+              color: Colors.white60,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              child: const Image(width: 100, image: AssetImage('assets/google.png')),
+              onPressed: () {
+                AuthService().signInWithGoogle();
+              },
+            ),
+            const SizedBox(
+              height: 100,
+            ),
           ],
         ),
       ),

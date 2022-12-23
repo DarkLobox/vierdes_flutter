@@ -46,7 +46,7 @@ class Plants extends StatelessWidget {
                           Text(documentSnapshot['description'].toString()),
                       leading: CircleAvatar(
                         radius: 30,
-                        backgroundColor: Colors.deepPurpleAccent,
+                        backgroundColor: Colors.greenAccent,
                         child: ClipOval(
                           child: Image.network(
                             documentSnapshot['image'].toString(),
